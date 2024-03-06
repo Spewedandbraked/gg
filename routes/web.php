@@ -23,7 +23,7 @@ Route::get('/', function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::get('/chat', 'App\Http\Controllers\PusherController@index')->name('chat'); //   ->name('chat') == привязывает поеботе имя используемое в видах! использование контроллера через href="{{route('chat')}}" 
+Route::get('/chat', 'App\Http\Controllers\PusherController@index')->name('chat'); //   ->name('chat') == привязывает имя используемое в видах! использование контроллера через href="{{route('chat')}}" 
 Route::post('/broadcast', 'App\Http\Controllers\PusherController@broadcast'); //украв с гайда хи хи даже не старался
 Route::post('/receive', 'App\Http\Controllers\PusherController@receive');
 
